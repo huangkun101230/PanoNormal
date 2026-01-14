@@ -3,10 +3,10 @@
   <h1 align="center">PanoNormal: Monocular Indoor 360° Surface Normal Estimation</h1>
   <p align="center">
     <a href="https://github.com/huangkun101230">Kun Huang</a>,
-    <p>Jianwei Yang</p>,
-    <p>Tielin Zhao</p>,
-    <p>Lei Ji</p>,
-    <p>Songyang Zhang*</p>,
+    <a href="">Jianwei Yang</a>,
+    <a href="">Tielin Zhao</a>,
+    <a href="">Lei Ji</a>,
+    <a href="">Songyang Zhang*</a>,
     <a href="https://people.wgtn.ac.nz/fanglue.zhang?_ga=2.161972092.1710887990.1730665987-888529436.1730407824">Fang-Lue Zhang*</a>,
     <a href="https://people.wgtn.ac.nz/neil.dodgson?_ga=2.172996195.1710887990.1730665987-888529436.1730407824">Neil A. Dodgson</a>,
   </p>
@@ -23,7 +23,7 @@ The presence of spherical distortion in equirectangular projection (ERP) images 
 
 <p align="center">
   <a href="">
-    <img src="assets/teaser.png" alt="teaser" width="95%">
+    <img src="assets/teaser.jpg" alt="teaser" width="95%">
   </a>
 </p>
 <p align="left">
@@ -32,7 +32,7 @@ Our PanoNormal method produces more accurate normal estimation predictions compa
 
 <p align="center">
   <a href="">
-    <img src="./assets/pipeline.png" alt="pipeline" width="95%">
+    <img src="./assets/pipeline.jpg" alt="pipeline" width="95%">
   </a>
 </p>
 <p align="left">
