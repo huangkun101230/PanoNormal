@@ -14,25 +14,27 @@
     *Corresponding authors
 
   </p>
-  <h3 align="center"><a href="https://arxiv.org/abs/2411.01749">Paper</a>
+  <h3 align="center"><a href="https://arxiv.org/abs/2405.18745">Paper</a>
   <div align="center"></div>
 </p>
 
 ## Introduction
 The presence of spherical distortion in equirectangular projection (ERP) images presents a persistent challenge in dense regression tasks such as surface normal estimation. Although it may appear straightforward to repurpose architectures developed for 360° depth estimation, our empirical findings indicate that such models yield suboptimal performance when applied to surface normal prediction. This is largely attributed to their architectural bias toward capturing global scene layout, which comes at the expense of the fine-grained local geometric cues that are critical for accurate surface orientation estimation. While convolutional neural networks (CNNs) have been employed to mitigate spherical distortion, their fixed receptive fields limit their ability to capture holistic scene structure. Conversely, vision transformers (ViTs) are capable of modeling long-range dependencies via global self-attention, but often fail to preserve high-frequency local detail. To address these limitations, we propose \textit{PanoNormal}, a monocular surface normal estimation architecture for 360° images that integrates the complementary strengths of CNNs and ViTs. In particular, we design a multi-level global self-attention mechanism that explicitly accounts for the spherical feature distribution, enabling our model to recover both global contextual structure and local geometric details. Experimental results demonstrate that our method not only achieves state-of-the-art performance on several benchmark 360° datasets, but also significantly outperforms adapted depth estimation models on the task of surface normal prediction.
 
+
 <p align="center">
   <a href="">
-    <img src="assets/teaser.jpg" alt="teaser" width="95%">
+    <img src="assets/teaser.jpg" alt="teaser" width="80%">
   </a>
 </p>
 <p align="left">
 Our PanoNormal method produces more accurate normal estimation predictions compared to the current state-of-the-art method, particularly in the areas highlighted by the red rectangle. For better visualization, we provide a 3D point cloud generated from the ground truth depth.</p>
 <br>
 
+
 <p align="center">
   <a href="">
-    <img src="./assets/pipeline.jpg" alt="pipeline" width="95%">
+    <img src="./assets/pipeline.jpg" alt="pipeline" width="80%">
   </a>
 </p>
 <p align="left">
@@ -55,12 +57,14 @@ conda activate panonormal
 
 
 ## Running
-Please [download our pretrained models](https://drive.google.com/drive/folders/1B_GI-3mc8hgLWi0OXq-msBbGxeyuyNeB?usp=sharing), and save these models to "saved_models/models".
+Please [download our pretrained models](https://drive.google.com/drive/folders/1pLSsfp_yRogOP58l3PVQpG044XJa_n82?usp=sharing), and save these models to "saved_models/models".
 To test on provided data in "./input_data"
 ```shell
 python evaluate.py
 ```
 The results will be saved at "./results/saved_models/"
+
+Please note, we only provided 3 Matterport3D, 3 Stanford2D3D, and 3 SunCG examples in our folder for limited space.
 
 For training our model, please modify the path in our dataset:
 For example, in datasets/dataset3D60.py, function gather_filepaths, change local="./input_data/" with your downloaded path
@@ -77,10 +81,10 @@ We mainly evaluate our method on [3D60 dataset](https://vcl3d.github.io/3D60/) a
 ## Citation
 If you find this repository useful in your project, please cite the following work. :)
 ```
-@article{huang2024multi,
-  title={Multi-task Geometric Estimation of Depth and Surface Normal from Monocular 360 $\{$$\backslash$deg$\}$ Images},
-  author={Huang, Kun and Zhang, Fang-Lue and Zhang, Fangfang and Lai, Yu-Kun and Rosin, Paul and Dodgson, Neil A},
-  journal={arXiv preprint arXiv:2411.01749},
+@article{huang2024panonormal,
+  title={Panonormal: Monocular Indoor 360° Surface Normal Estimation},
+  author={Huang, Kun and Zhang, Fanglue and Dodgson, Neil A},
+  journal={Available at SSRN 5100169},
   year={2024}
 }
 ```
